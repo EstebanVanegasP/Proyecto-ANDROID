@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "398709177824",
+    "project_id": "proyectospring-android",
+    "storage_bucket": "proyectospring-android.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:398709177824:android:30c523bc63a4e29bcfff85",
+        "android_client_info": {
+          "package_name": "com.example.proyectoarquitectura_desarrollo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0OdFh1uiIuD0q36xD6435nNG1Z1HlMOE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
