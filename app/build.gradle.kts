@@ -59,14 +59,14 @@ android {
 dependencies {
 
     // Navigation
-    implementation("androidx.navigation:navigation-compose:2.5.3")
+    implementation(libs.androidx.navigation.compose)
 
     // Firebase
-    implementation(platform("com.google.firebase:firebase-bom:32.1.0"))
-    implementation ("com.google.firebase:firebase-auth:22.0.0")
-    implementation("com.google.firebase:firebase-firestore-ktx")
-    implementation("com.google.firebase:firebase-auth-ktx")
-    implementation ("androidx.lifecycle:lifecycle-runtime-ktx:2.6.0")
+    implementation(platform(libs.firebase.bom))
+    implementation (libs.firebase.auth)
+    implementation(libs.firebase.firestore.ktx)
+    implementation(libs.firebase.auth.ktx)
+    implementation (libs.androidx.lifecycle.runtime.ktx.v260)
 
 
     //Ktx
@@ -84,9 +84,11 @@ dependencies {
 
     // Material 3
     implementation(libs.androidx.material3)
+    implementation (libs.material3)
+
 
     // Material 2
-    implementation("com.google.android.material:material:1.12.0")
+    implementation(libs.material)
 
     // Pruebas
     testImplementation(libs.junit)

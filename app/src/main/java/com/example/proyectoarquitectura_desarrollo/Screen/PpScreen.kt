@@ -19,6 +19,15 @@ fun PpScreen(navController: NavController) {
         Spacer(modifier = Modifier.height(16.dp))
 
         Button(
+            onClick = { navController.navigate("eventos") },
+            modifier = Modifier.fillMaxWidth(),
+            contentPadding = PaddingValues(vertical = 16.dp)
+        ) {
+            Text("Eventos")
+        }
+
+
+        Button(
             onClick = { navController.navigate("usuarios") },
             modifier = Modifier.fillMaxWidth(),
             contentPadding = PaddingValues(vertical = 16.dp)
@@ -41,5 +50,13 @@ fun PpScreen(navController: NavController) {
         ) {
             Text("Gestionar Categorías")
         }
+        Button(
+            onClick = { navController.navigate("cotizaciones") },
+            modifier = Modifier.fillMaxWidth(),
+            contentPadding = PaddingValues(vertical = 16.dp)
+        ) {
+            Text("Gestionar Cotizaciones")
+        }
+
     }
 }

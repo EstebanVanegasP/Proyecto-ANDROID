@@ -32,4 +32,17 @@ class UsuarioService {
             false
         }
     }
+
+    //COTIZACIONES
+
+    suspend fun getUserById(userId: String): Map<String, Any>? {
+        return try {
+            val document = usersCollection.document(userId).get().await()
+            document.data
+        } catch (e: Exception) {
+            e.printStackTrace()
+            null
+        }
+    }
+
 }

@@ -18,6 +18,8 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.proyectoarquitectura_desarrollo.Service.PaqueteService
 import kotlinx.coroutines.launch
+import com.example.proyectoarquitectura_desarrollo.Model.ElementoState
+
 
 @Composable
 fun EditarPaqueteScreen(
@@ -210,7 +212,3 @@ fun EditarPaqueteScreen(
     }
 }
 
-data class ElementoState(
-    val cantidad: MutableState<Int>,
-    val valorUnitario: MutableState<Int>
-)

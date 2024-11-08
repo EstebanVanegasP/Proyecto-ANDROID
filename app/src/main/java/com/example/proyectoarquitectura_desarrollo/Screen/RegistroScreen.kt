@@ -63,7 +63,6 @@ fun RegistroScreen(
             modifier = Modifier.fillMaxWidth()
         )
         Spacer(modifier = Modifier.height(8.dp))
-        // Campos de email y contraseñas (como antes)
         TextField(
             value = email,
             onValueChange = { email = it },
@@ -88,7 +87,6 @@ fun RegistroScreen(
         )
         Spacer(modifier = Modifier.height(16.dp))
 
-        // Selección del rol con RadioButtons
         Text("Selecciona el rol:")
         Row {
             RadioButton(

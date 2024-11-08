@@ -22,7 +22,7 @@ class MainActivity : ComponentActivity() {
             ProyectoArquitectura_DesarrolloTheme {
                 val navController = rememberNavController()
 
-                NavHost(navController = navController, startDestination = "pp") {
+                NavHost(navController = navController, startDestination = "pp") { //RECUERDA CAMBIAR ESTOOOO :P por login
                     composable("login") {
                         LoginScreen(
                             auth = auth,
@@ -30,6 +30,7 @@ class MainActivity : ComponentActivity() {
                             onNavigateToRegister = { navController.navigate("register") }
                         )
                     }
+
                     composable("register") {
                         RegistroScreen(
                             auth = auth,
@@ -61,23 +62,6 @@ class MainActivity : ComponentActivity() {
                         }
                     }
 
-                    /*
-                    composable("paquetes") {
-                        PaquetesScreen(navController = navController)
-                    }
-
-
-
-                    composable(
-                        "paquetes_categoria/{categoria}",
-                        arguments = listOf(navArgument("categoria") { type = NavType.StringType })
-                    ) { backStackEntry ->
-                        val categoria = backStackEntry.arguments?.getString("categoria")
-                        if (categoria != null) {
-                            PaquetesPorCategoriaScreen(navController, categoria)
-                        }
-                    }
-                    */
                     composable(
                         "historial_usuario/{userId}",
                         arguments = listOf(navArgument("userId") { type = NavType.StringType })
@@ -87,6 +71,41 @@ class MainActivity : ComponentActivity() {
                             HistorialUsuarioScreen(userId = userId, navController = navController)
                         }
                     }
+
+                    // Pantalla de Cotizaciones
+                    composable("cotizaciones") {
+                        CotizacionScreen(navController = navController)
+                    }
+
+                    // Nueva pantalla de Editar Cotización
+                    composable(
+                        "editar_cotizacion/{cotizacionId}",
+                        arguments = listOf(navArgument("cotizacionId") { type = NavType.StringType })
+                    ) { backStackEntry ->
+                        val cotizacionId = backStackEntry.arguments?.getString("cotizacionId")
+                        if (cotizacionId != null) {
+                            EditarCotizacionScreen(
+                                cotizacionId = cotizacionId,
+                                navController = navController
+                            )
+                        }
+                    }
+
+                    composable("eventos") {
+                        EventoScreen(navController = navController)
+                    }
+
+                    composable(
+                        "editar_evento/{eventoId}",
+                        arguments = listOf(navArgument("eventoId") { type = NavType.StringType })
+                    ) { backStackEntry ->
+                        val eventoId = backStackEntry.arguments?.getString("eventoId")
+                        if (eventoId != null) {
+                            EditarEventoScreen(eventoId = eventoId, navController = navController)
+                        }
+                    }
+
+
                 }
             }
         }
